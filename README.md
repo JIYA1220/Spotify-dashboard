@@ -41,19 +41,11 @@ An end-to-end streaming analytics dashboard that combines **Power BI reporting**
 
 ## 2. Dashboard Preview
 
-Add a single screenshot before publishing:
-
-1. Take a screenshot of the Power BI dashboard page
-2. Save it as `assets/dashboard.png`
-3. The image will render automatically below
-
 ![Dashboard Preview](assets/dashboard.png)
 
 ---
 
 ## 3. Key Insights Found 
-
-Replace these with insights that match your final output:
 
 | Insight | Finding |
 |---|---|
