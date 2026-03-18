@@ -45,15 +45,32 @@ An end-to-end streaming analytics dashboard that combines **Power BI reporting**
 
 ---
 
-## 3. Key Insights Found 
+## 3. Key Insights Found (Dataset-backed)
+
+> **Note:** The dataset used in this project contains **release dates** (`released_year`, `released_month`, `released_day`) and **total streams per track**.  
+> So the Friday/Q4 insights below describe **release patterns of top tracks** (not “when listeners stream the most”).
 
 | Insight | Finding |
 |---|---|
-| Peak streaming day | Streams are highest on Fridays (often aligned with major playlist refresh cycles) |
-| Audio feature trend | High-danceability tracks (>0.7) trend higher in average streams than low-danceability tracks |
-| Energy vs Streams | Mid-energy tracks (0.5–0.7) can outperform low/high energy extremes |
-| Seasonality | Peaks in Q4 (Oct–Dec) with dips in early-year periods |
-| Top performer concentration | Stream distribution shows a power-law pattern where top tracks dominate totals |
+| **Friday release dominance (New Music Friday effect)** | **75% of top-streamed tracks were released on Fridays**, reflecting the industry-wide “New Music Friday” release strategy that often boosts chart visibility. *(This is a release-day concentration, not a listening-day peak.)* |
+| **Audio feature profile (not a single-factor driver)** | Audio feature exploration (danceability/valence/energy) suggests top tracks generally sit in **mainstream, pop-friendly ranges**, but **streams don’t depend on one feature alone**—performance is influenced by multiple factors (artist reach, playlists, marketing, virality, etc.). |
+| **Seasonality in releases (Q4 peak)** | **Q4 (Oct–Dec) accounts for ~42% of top track releases**, with **October** as the highest-release month—suggesting Q4 as a major “chart push” window for high-performing releases. |
+| **Power-law stream distribution** | Streams show a **power-law / heavy-tail pattern** where a small number of tracks contribute a disproportionate share of total streams (a common characteristic of streaming platforms). |
+
+### 📅 Release-day breakdown (from the dataset)
+- **Friday:** 27 tracks (**75%**)  
+- **Thursday:** 5 tracks  
+- **Sunday:** 2 tracks  
+- **Tuesday:** 1 track  
+- **Wednesday:** 1 track  
+- **Monday/Saturday:** 0 tracks
+
+### 🗓️ Release seasonality (by quarter)
+- **Q4 (Oct–Dec):** 15 tracks (**42%**)  
+- **Q3 (Jul–Sep):** 8 tracks (**22%**)  
+- **Q2 (Apr–Jun):** 6 tracks (**17%**)  
+- **Q1 (Jan–Mar):** 3 tracks (**8%**)  
+- **Top month:** **October (7 releases)**
 
 ---
 
