@@ -1,5 +1,14 @@
+import os
+import sys
+
 import requests
 import pandas as pd
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # Function to get Spotify access token
 def get_spotify_token(client_id, client_secret):
@@ -40,9 +49,11 @@ def get_track_details(track_id, token):
     except (KeyError, IndexError):
         return 'Not found'
 
-# Your Spotify API credentials
-client_id = '029cfd80e0314cb28848a899c4e24c5e'
-client_secret = '52b4d3a3cea44542891e441d983fff39'
+# Spotify API credentials come from the environment (or a local .env file), never from the code
+client_id = os.environ.get('SPOTIFY_CLIENT_ID')
+client_secret = os.environ.get('SPOTIFY_CLIENT_SECRET')
+if not client_id or not client_secret:
+    sys.exit('Set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET (see .env.example).')
 
 # Get access token
 access_token = get_spotify_token(client_id, client_secret)
